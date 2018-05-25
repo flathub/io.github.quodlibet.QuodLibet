@@ -15,6 +15,12 @@ finish-args:
   - "--socket=pulseaudio"
   - "--filesystem=host"
 
+  # some embedded covers and the fifo is still shared through /tmp
+  - "--filesystem=/tmp"
+
+  # bookmarks in the filesystem browser
+  - "--filesystem=xdg-config/gtk-3.0:ro"
+
   # Various D-Bus names: for...
   # ...multimedia keys
   - "--talk-name=org.gnome.SettingsDaemon"
@@ -61,4 +67,4 @@ modules:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
         # branch: quodlibet-4.1
-        commit: 7781494ced95f4b054d02eeefa545128e8c519a6
+        commit: 624b514c648b202b8132cdce2c575580361577a5
