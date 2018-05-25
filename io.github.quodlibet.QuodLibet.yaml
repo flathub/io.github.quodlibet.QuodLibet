@@ -78,6 +78,47 @@ modules:
       - type: archive
         url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.0.tar.xz
         sha256: 3fb9ea5fc8a2de4b3eaec4128d71c6a2d81dd19befe1cd87cb833b98bcb542d1
+  - name: chromaprint
+    buildsystem: cmake
+    config-opts:
+      - "-DCMAKE_BUILD_TYPE=Release"
+      - "-DBUILD_TESTS=off"
+      - "-DBUILD_TOOLS=off"
+      - "-DAUDIO_PROCESSOR_LIB=dummy"
+    sources:
+      - type: archive
+        url: https://github.com/acoustid/chromaprint/releases/download/v1.4.3/chromaprint-1.4.3.tar.gz
+        sha256: ea18608b76fb88e0203b7d3e1833fb125ce9bb61efe22c6e169a50c52c457f82
+  - name: libbs2b
+    rm-configure: true
+    sources:
+      - type: archive
+        url: https://sourceforge.net/projects/bs2b/files/libbs2b/3.1.0/libbs2b-3.1.0.tar.gz
+        sha256: 6aaafd81aae3898ee40148dd1349aab348db9bfae9767d0e66e0b07ddd4b2528
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - cp -p /usr/share/automake-*/config.{sub,guess} build-aux
+          - autoreconf -vfi
+      - type: patch
+        path: patches/bs2b-fix-automake-dist-lzma.patch
+    cleanup:
+      - /bin
+  - name: soundtouch
+    sources:
+      - type: archive
+        url: https://www.surina.net/soundtouch/soundtouch-2.0.0.tar.gz
+        sha256: d224f7d1421b5f8e74a74c85741345bd9802618a40ae30ce5b427a5705c89d25
+  - name: gst-plugins-bad
+    config-opts:
+      - "--disable-gtk-doc"
+    cleanup:
+      - "*.la"
+      - "/share/gtk-doc"
+    sources:
+      - type: archive
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.14.0.tar.xz
+        sha256: ed5e2badb6f2858f60017b93334d91fe58a0e3f85ed2f37f2e931416fafb4f9f
   - name: quodlibet
     buildsystem: simple
     subdir: quodlibet
