@@ -16,6 +16,9 @@ REPO := $(BUILD)/repo
 
 all: $(REPO) dist-flatpaks
 
+install: $(BUILD)/$(APP_ID).flatpak
+	flatpak install $(BUILD)/$(APP_ID).flatpak
+
 $(REPO): *.json *.yaml
 	flatpak-builder --force-clean --repo=$@ $(BUILD)/build --state-dir=$(BUILD)/.flatpak-builder $(APP_ID).yaml
 	flatpak build-update-repo $(REPO)
