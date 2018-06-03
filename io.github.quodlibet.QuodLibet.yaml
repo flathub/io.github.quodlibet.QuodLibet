@@ -113,8 +113,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
-        # branch: quodlibet-4.1
-        commit: 624b514c648b202b8132cdce2c575580361577a5
+        tag: release-4.1.0
 cleanup:
   - /include
   - /share/gtk-doc
