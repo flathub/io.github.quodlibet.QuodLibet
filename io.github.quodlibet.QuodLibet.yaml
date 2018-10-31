@@ -1,7 +1,7 @@
 ---
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '3.28'
+runtime-version: '3.30'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -23,7 +23,6 @@ finish-args:
 
   # Various D-Bus names: for...
   # ...multimedia keys
-  - "--talk-name=org.gnome.SettingsDaemon"
   - "--talk-name=org.gnome.SettingsDaemon.MediaKeys"
   - "--talk-name=org.mate.SettingsDaemon"
 
@@ -55,9 +54,16 @@ finish-args:
   - "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
 
 modules:
-  - python-modules.json
-  - kakasi.yaml
+  - python-modules.yaml
   - flathub-shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json
+  - name: kakasi
+    sources:
+      - type: archive
+        url: http://kakasi.namazu.org/stable/kakasi-2.3.6.tar.xz
+        sha256: 2ee57b1b03c74fd5766e741c3812028efc73bc0e0bf93a6e7ff20eb4701f3ee3
+    cleanup:
+      - /lib
+      - /include
   - name: chromaprint
     buildsystem: cmake
     config-opts:
@@ -87,24 +93,30 @@ modules:
   - name: soundtouch
     sources:
       - type: archive
-        url: https://www.surina.net/soundtouch/soundtouch-2.0.0.tar.gz
-        sha256: d224f7d1421b5f8e74a74c85741345bd9802618a40ae30ce5b427a5705c89d25
+        url: https://gitlab.com/soundtouch/soundtouch/-/archive/2.1.0/soundtouch-2.1.0.tar.gz
+        sha256: 454712b08bf758f6a4c0df8821350c323e5b274443a20e21d193d17c5dc3d0d5
   - name: gst-libav
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.0.tar.xz
-        sha256: fb134b4d3e054746ef8b922ff157b0c7903d1fdd910708a45add66954da7ef89
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.3.tar.xz
+        sha256: 9b03529bb45785ad1b6b1f4856c52a832ad5fc472285ce49174439e8015ab677
   - name: gst-plugins-ugly
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.0.tar.xz
-        sha256: 3fb9ea5fc8a2de4b3eaec4128d71c6a2d81dd19befe1cd87cb833b98bcb542d1
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.3.tar.xz
+        sha256: 43847fc4d1eae26dd48a6a93d0460146f5f0802582a7e8a9cc66f09dcb0b2306
+  - name: libgme
+    buildsystem: cmake
+    sources:
+      - type: archive
+        url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.2.tar.xz
+        sha256: 5046cb471d422dbe948b5f5dd4e5552aaef52a0899c4b2688e5a68a556af7342
   - name: gst-plugins-bad
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.14.0.tar.xz
-        sha256: ed5e2badb6f2858f60017b93334d91fe58a0e3f85ed2f37f2e931416fafb4f9f
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.14.3.tar.xz
+        sha256: b2224e5d9c1b85ad51233f6135524bb9e16a9172d395edc79c73b89094659fd5
   - name: quodlibet
     buildsystem: simple
     subdir: quodlibet
@@ -113,7 +125,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
-        tag: release-4.1.0
+        tag: release-4.2.0
 cleanup:
   - /include
   - /share/gtk-doc
