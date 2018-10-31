@@ -19,7 +19,7 @@ all: $(REPO) dist-flatpaks
 install: $(BUILD)/$(APP_ID).flatpak
 	flatpak install $(BUILD)/$(APP_ID).flatpak
 
-$(REPO): *.json *.yaml
+$(REPO): *.yaml
 	flatpak-builder --force-clean --repo=$@ $(BUILD)/build --state-dir=$(BUILD)/.flatpak-builder $(APP_ID).yaml
 	flatpak build-update-repo $(REPO)
 
@@ -43,8 +43,9 @@ python-modules:
 		--output=python-modules.json \
 		$(CORE_DEPENDS) \
 		$(PLUGINS_DEPENDS)
+	python3 flatpak-builder-tools/flatpak-json2yaml.py python-modules.json -o python-modules.yaml && rm python-modules.json
 
 setup:
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install flathub org.gnome.Sdk//3.28
-	flatpak install flathub org.gnome.Platform//3.28
+	flatpak install flathub org.gnome.Sdk//3.30
+	flatpak install flathub org.gnome.Platform//3.30
