@@ -98,14 +98,14 @@ modules:
   - name: gst-libav
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.3.tar.xz
-        sha256: 9b03529bb45785ad1b6b1f4856c52a832ad5fc472285ce49174439e8015ab677
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.14.4.tar.xz
+        sha256: dfd78591901df7853eab7e56a86c34a1b03635da0d3d56b89aa577f1897865da
   - name: gst-plugins-ugly
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.3.tar.xz
-        sha256: 43847fc4d1eae26dd48a6a93d0460146f5f0802582a7e8a9cc66f09dcb0b2306
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.14.4.tar.xz
+        sha256: ac02d837f166c35ff6ce0738e281680d0b90052cfb1f0255dcf6aaca5f0f6d23
   - name: libgme
     buildsystem: cmake
     sources:
@@ -115,8 +115,8 @@ modules:
   - name: gst-plugins-bad
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.14.3.tar.xz
-        sha256: b2224e5d9c1b85ad51233f6135524bb9e16a9172d395edc79c73b89094659fd5
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.14.4.tar.xz
+        sha256: 910b4e0e2e897e8b6d06767af1779d70057c309f67292f485ff988d087aa0de5
   - name: quodlibet
     buildsystem: simple
     subdir: quodlibet
