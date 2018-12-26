@@ -125,7 +125,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
-        tag: release-4.2.0
+        tag: release-4.2.1
 cleanup:
   - /include
   - /share/gtk-doc
