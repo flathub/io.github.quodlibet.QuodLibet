@@ -133,4 +133,4 @@ cleanup:
   - "*.la"
   - "*.a"
 cleanup-commands:
-  - python3 -m compileall --invalidation-mode=unchecked-hash /app
+  - python3 -m compileall -f --invalidation-mode=unchecked-hash /app
