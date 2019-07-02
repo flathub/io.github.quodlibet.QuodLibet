@@ -1,7 +1,7 @@
 ---
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '3.30'
+runtime-version: '3.32'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -126,6 +126,8 @@ modules:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
         tag: release-4.2.1
+      - type: patch
+        path: patches/appdata-content-rating.patch
 cleanup:
   - /include
   - /share/gtk-doc
