@@ -94,19 +94,19 @@ modules:
   - name: soundtouch
     sources:
       - type: archive
-        url: https://gitlab.com/soundtouch/soundtouch/-/archive/2.1.0/soundtouch-2.1.0.tar.gz
-        sha256: 454712b08bf758f6a4c0df8821350c323e5b274443a20e21d193d17c5dc3d0d5
+        url: https://gitlab.com/soundtouch/soundtouch/-/archive/2.1.2/soundtouch-2.1.2.tar.gz
+        sha256: 2826049e2f34efbc4c8a47d00c93649822b0c14e1f29f5569835704814590732
   - name: gst-libav
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.1.tar.xz
-        sha256: e8a5748ae9a4a7be9696512182ea9ffa6efe0be9b7976916548e9d4381ca61c4
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.2.tar.xz
+        sha256: c724f612700c15a933c7356fbeabb0bb9571fb5538f8b1b54d4d2d94188deef2
   - name: gst-plugins-ugly
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.16.1.tar.xz
-        sha256: 4bf913b2ca5195ac3b53b5e3ade2dc7c45d2258507552ddc850c5fa425968a1d
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.16.2.tar.xz
+        sha256: 5500415b865e8b62775d4742cbb9f37146a50caecfc0e7a6fc0160d3c560fbca
   - name: libgme
     buildsystem: cmake
     sources:
@@ -117,19 +117,17 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.1.tar.xz
-        sha256: 56481c95339b8985af13bac19b18bc8da7118c2a7d9440ed70e7dcd799c2adb5
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.2.tar.xz
+        sha256: f1cb7aa2389569a5343661aae473f0a940a90b872001824bc47fa8072a041e74
   - name: quodlibet
     buildsystem: simple
     subdir: quodlibet
     build-commands:
-      - pip3 install --no-deps --prefix=${FLATPAK_DEST} .
+      - python3 setup.py install --prefix=${FLATPAK_DEST}
     sources:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
-        tag: release-4.2.1
-      - type: patch
-        path: patches/appdata-content-rating.patch
+        tag: release-4.3.0
 cleanup:
   - /include
   - /share/gtk-doc

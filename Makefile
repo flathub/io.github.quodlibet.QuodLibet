@@ -40,10 +40,10 @@ dist-flatpaks: $(DIST)/$(APP_ID).flatpak $(DIST)/$(APP_ID).Locale.flatpak
 python-modules:
 	python3 flatpak-builder-tools/pip/flatpak-pip-generator \
 		--cleanup=scripts \
-		--output=python-modules.json \
+		--output=python-modules \
 		$(CORE_DEPENDS) \
 		$(PLUGINS_DEPENDS)
-	python3 flatpak-builder-tools/flatpak-json2yaml.py python-modules.json -o python-modules.yaml && rm python-modules.json
+	python3 flatpak-builder-tools/flatpak-json2yaml.py --force python-modules.json -o python-modules.yaml && rm python-modules.json
 
 setup:
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
