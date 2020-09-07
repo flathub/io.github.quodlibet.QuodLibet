@@ -1,7 +1,7 @@
 ---
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '3.34'
+runtime-version: '3.36'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -74,8 +74,8 @@ modules:
       - "-DAUDIO_PROCESSOR_LIB=dummy"
     sources:
       - type: archive
-        url: https://github.com/acoustid/chromaprint/releases/download/v1.4.3/chromaprint-1.4.3.tar.gz
-        sha256: ea18608b76fb88e0203b7d3e1833fb125ce9bb61efe22c6e169a50c52c457f82
+        url: https://github.com/acoustid/chromaprint/releases/download/v1.5.0/chromaprint-1.5.0.tar.gz
+        sha256: 573a5400e635b3823fc2394cfa7a217fbb46e8e50ecebd4a61991451a8af766a
   - name: libbs2b
     rm-configure: true
     sources:
@@ -111,8 +111,8 @@ modules:
     buildsystem: cmake
     sources:
       - type: archive
-        url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.2.tar.xz
-        sha256: 5046cb471d422dbe948b5f5dd4e5552aaef52a0899c4b2688e5a68a556af7342
+        url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.3.tar.xz
+        sha256: aba34e53ef0ec6a34b58b84e28bf8cfbccee6585cebca25333604c35db3e051d
   - name: gst-plugins-bad
     buildsystem: meson
     sources:
