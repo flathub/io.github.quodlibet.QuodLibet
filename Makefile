@@ -1,7 +1,7 @@
 CORE_DEPENDS := \
 	mutagen \
 	sgmllib3k \
-	feedparser
+	'feedparser<6'
 PLUGINS_DEPENDS := \
 	pyinotify \
 	musicbrainzngs \
@@ -48,5 +48,5 @@ python-modules:
 
 setup:
 	flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install --user flathub org.gnome.Sdk//3.36
-	flatpak install --user flathub org.gnome.Platform//3.36
+	flatpak install --user flathub org.gnome.Sdk//3.38
+	flatpak install --user flathub org.gnome.Platform//3.38
