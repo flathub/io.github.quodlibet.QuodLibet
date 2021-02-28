@@ -1,7 +1,7 @@
 CORE_DEPENDS := \
 	mutagen \
 	sgmllib3k \
-	'feedparser<6'
+	feedparser
 PLUGINS_DEPENDS := \
 	pyinotify \
 	musicbrainzngs \

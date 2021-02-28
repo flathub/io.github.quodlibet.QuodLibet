@@ -9,8 +9,8 @@ modules:
         "mutagen"
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl
-        sha256: 9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed
+        url: https://files.pythonhosted.org/packages/f3/d9/2232a4cb9a98e2d2501f7e58d193bc49c956ef23756d7423ba1bd87e386d/mutagen-1.45.1.tar.gz
+        sha256: 6397602efb3c2d7baebd2166ed85731ae1c1d475abca22090b7141ff5034b3e1
     cleanup:
       - /bin
       - /share/man/man1
@@ -30,11 +30,14 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST}
-        "feedparser<6"
+        "feedparser"
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ca/f4/91a056f11751701c24f86c692d92fee290b0ba3f99f657cdeb85ad3da402/feedparser-5.2.1.tar.gz
-        sha256: bd030652c2d08532c034c27fcd7c85868e7fa3cb2b17f230a44a6bbc92519bf9
+        url: https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz
+        sha256: 7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9
+      - type: file
+        url: https://files.pythonhosted.org/packages/1b/84/934fc369d2e36d7fd9a196a72e68035cabc672c46bf7aa2661838e4d0ca9/feedparser-6.0.2.tar.gz
+        sha256: 1b00a105425f492f3954fd346e5b524ca9cef3a4bbf95b8809470e9857aa1074
     cleanup:
       - /bin
       - /share/man/man1
@@ -57,8 +60,8 @@ modules:
         "musicbrainzngs"
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/6d/fd/cef7b2580436910ccd2f8d3deec0f3c81743e15c0eb5b97dde3fbf33c0c8/musicbrainzngs-0.7.1-py2.py3-none-any.whl
-        sha256: e841a8f975104c0a72290b09f59326050194081a5ae62ee512f41915090e1a10
+        url: https://files.pythonhosted.org/packages/0a/67/3e74ae93d90ceeba72ed1a266dd3ca9abd625f315f0afd35f9b034acedd1/musicbrainzngs-0.7.1.tar.gz
+        sha256: ab1c0100fd0b305852e65f2ed4113c6de12e68afd55186987b8ed97e0f98e627
     cleanup:
       - /bin
       - /share/man/man1
