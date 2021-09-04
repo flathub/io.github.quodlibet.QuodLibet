@@ -1,7 +1,7 @@
 ---
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '3.38'
+runtime-version: '40'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -94,8 +94,8 @@ modules:
   - name: soundtouch
     sources:
       - type: archive
-        url: https://gitlab.com/soundtouch/soundtouch/-/archive/2.1.2/soundtouch-2.1.2.tar.gz
-        sha256: 2826049e2f34efbc4c8a47d00c93649822b0c14e1f29f5569835704814590732
+        url: https://gitlab.com/soundtouch/soundtouch/-/archive/2.3.0/soundtouch-2.3.0.tar.gz
+        sha256: b0f38497c72bb545d5d5c505243c5daa3598567641d25728d015b27678a68ad8
   - name: gst-libav
     sources:
       - type: archive
