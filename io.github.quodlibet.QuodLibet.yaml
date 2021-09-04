@@ -47,12 +47,6 @@ finish-args:
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.xfce.FileManager"
 
-  # ...talking to dconf
-  - "--filesystem=xdg-run/dconf"
-  - "--filesystem=~/.config/dconf:ro"
-  - "--talk-name=ca.desrt.dconf"
-  - "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
-
 modules:
   - python-modules.yaml
   - flathub-shared-modules/dbus-glib/dbus-glib-0.110.json
