@@ -9,6 +9,7 @@ PLUGINS_DEPENDS := \
 	paho-mqtt
 
 APP_ID := io.github.quodlibet.QuodLibet
+RUNTIME_VERSION := 42
 
 BUILD := build
 DIST := dist
@@ -48,5 +49,5 @@ python-modules:
 
 setup:
 	flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install --user flathub org.gnome.Sdk//40
-	flatpak install --user flathub org.gnome.Platform//40
+	flatpak install --user flathub org.gnome.Sdk//$(RUNTIME_VERSION)
+	flatpak install --user flathub org.gnome.Platform//$(RUNTIME_VERSION)
