@@ -1,7 +1,7 @@
 ---
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '40'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
