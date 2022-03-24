@@ -47,6 +47,14 @@ finish-args:
   - "--talk-name=org.kde.StatusNotifierWatcher"
   - "--talk-name=org.xfce.FileManager"
 
+add-extensions:
+  org.freedesktop.Platform.ffmpeg-full:
+    add-ld-path: .
+    autodelete: false
+    autodownload: true
+    directory: lib/ffmpeg
+    version: '21.08'
+
 modules:
   - python-modules.yaml
   - flathub-shared-modules/dbus-glib/dbus-glib.json
@@ -111,18 +119,12 @@ modules:
           project-id: 115722
           url-template: https://codeberg.org/soundtouch/soundtouch/archive/$version.tar.gz
 
-  - name: gst-libav
-    sources:
-      - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.3.tar.xz
-        sha256: d10c5eb1a00a91de97c85c0956c663aa6e99d268195cdec4534c179b831538ec
-
   - name: gst-plugins-ugly
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.16.3.tar.xz
-        sha256: 403c21688065f41e53008874402b5c07832567cc1309a60df597eab7ff5843f0
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.18.6.tar.xz
+        sha256: 4969c409cb6a88317d2108b8577108e18623b2333d7b587ae3f39459c70e3a7f
 
   - name: libgme
     buildsystem: cmake
@@ -135,8 +137,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.3.tar.xz
-        sha256: 84efe57011658f0a53a5d5b20f64ef109f5105dccb0808c21e069e946673514d
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.18.6.tar.xz
+        sha256: 0b1b50ac6311f0c510248b6cd64d6d3c94369344828baa602db85ded5bc70ec9
 
   - name: quodlibet
     buildsystem: simple
@@ -155,3 +157,4 @@ cleanup:
   - "*.a"
 cleanup-commands:
   - python3 -m compileall -f --invalidation-mode=unchecked-hash /app
+  - mkdir -p ${FLATPAK_DEST}/lib/ffmpeg
