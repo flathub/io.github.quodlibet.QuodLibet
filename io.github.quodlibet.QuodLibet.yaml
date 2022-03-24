@@ -49,7 +49,7 @@ finish-args:
 
 modules:
   - python-modules.yaml
-  - flathub-shared-modules/dbus-glib/dbus-glib-0.110.json
+  - flathub-shared-modules/dbus-glib/dbus-glib.json
   - flathub-shared-modules/libappindicator/libappindicator-gtk3-introspection-12.10.json
   
   - name: kakasi
