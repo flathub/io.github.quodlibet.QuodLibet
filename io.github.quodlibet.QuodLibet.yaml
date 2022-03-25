@@ -111,12 +111,6 @@ modules:
           project-id: 115722
           url-template: https://codeberg.org/soundtouch/soundtouch/archive/$version.tar.gz
 
-  - name: gst-libav
-    sources:
-      - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.3.tar.xz
-        sha256: d10c5eb1a00a91de97c85c0956c663aa6e99d268195cdec4534c179b831538ec
-
   - name: gst-plugins-ugly
     buildsystem: meson
     sources:
@@ -137,6 +131,35 @@ modules:
       - type: archive
         url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.3.tar.xz
         sha256: 84efe57011658f0a53a5d5b20f64ef109f5105dccb0808c21e069e946673514d
+
+  - name: ffmpeg
+    buildsystem: autotools
+    config-opts:
+      - --disable-doc
+      - --disable-static
+      - --enable-shared
+      - --enable-optimizations
+      - --disable-everything
+      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8
+      - --enable-demuxer=asf,xwma,tta,mpc,mpc8
+      - --enable-protocol=file
+    sources:
+      - type: archive
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz
+        sha256: eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02
+        x-checker-data:
+          type: anitya
+          project-id: 5405
+          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+    cleanup:
+      - /share/ffmpeg
+
+  - name: gst-libav
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.3.tar.xz
+        sha256: d10c5eb1a00a91de97c85c0956c663aa6e99d268195cdec4534c179b831538ec
 
   - name: quodlibet
     buildsystem: simple
