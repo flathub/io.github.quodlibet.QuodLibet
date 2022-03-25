@@ -11,6 +11,10 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl
         sha256: 9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed
+        x-checker-data:
+          type: pypi
+          name: mutagen
+          packagetype: bdist_wheel
     cleanup:
       - /bin
       - /share/man/man1
@@ -23,6 +27,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz
         sha256: 7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9
+        x-checker-data:
+          type: pypi
+          name: sgmllib3k
     cleanup:
       - /bin
       - /share/man/man1
@@ -35,9 +42,16 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz
         sha256: 7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9
+        x-checker-data:
+          type: pypi
+          name: sgmllib3k
       - type: file
         url: https://files.pythonhosted.org/packages/d8/b2/15bf6781a861bbc5dd801d467f26448fb322bfedcd30f2e62b148d104dfb/feedparser-6.0.8-py3-none-any.whl
         sha256: 1b7f57841d9cf85074deb316ed2c795091a238adb79846bc46dccdaf80f9c59a
+        x-checker-data:
+          type: pypi
+          name: feedparser
+          packagetype: bdist_wheel
     cleanup:
       - /bin
       - /share/man/man1
@@ -50,6 +64,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/e3/c0/fd5b18dde17c1249658521f69598f3252f11d9d7a980c5be8619970646e1/pyinotify-0.9.6.tar.gz
         sha256: 9c998a5d7606ca835065cdabc013ae6c66eb9ea76a00a1e3bc6e0cfe2b4f71f4
+        x-checker-data:
+          type: pypi
+          name: pyinotify
     cleanup:
       - /bin
       - /share/man/man1
@@ -62,6 +79,10 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/6d/fd/cef7b2580436910ccd2f8d3deec0f3c81743e15c0eb5b97dde3fbf33c0c8/musicbrainzngs-0.7.1-py2.py3-none-any.whl
         sha256: e841a8f975104c0a72290b09f59326050194081a5ae62ee512f41915090e1a10
+        x-checker-data:
+          type: pypi
+          name: musicbrainzngs
+          packagetype: bdist_wheel
     cleanup:
       - /bin
       - /share/man/man1
@@ -74,6 +95,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/b1/5c/ccfc167485806c1936f7d3ba97db6c448d0089c5746ba105b6eb22dba60e/dbus-python-1.2.18.tar.gz
         sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260
+        x-checker-data:
+          type: pypi
+          name: dbus-python
     cleanup:
       - /bin
       - /share/man/man1
@@ -86,6 +110,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/f8/dd/4b75dcba025f8647bc9862ac17299e0d7d12d3beadbf026d8c8d74215c12/paho-mqtt-1.6.1.tar.gz
         sha256: 2a8291c81623aec00372b5a85558a372c747cbca8e9934dfe218638b8eefc26f
+        x-checker-data:
+          type: pypi
+          name: paho-mqtt
     cleanup:
       - /bin
       - /share/man/man1

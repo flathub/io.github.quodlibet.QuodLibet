@@ -43,6 +43,7 @@ python-modules:
 	python3 flatpak-builder-tools/pip/flatpak-pip-generator \
 		--cleanup=scripts \
 		--output=python-modules \
+		--checker-data \
 		$(CORE_DEPENDS) \
 		$(PLUGINS_DEPENDS)
 	python3 flatpak-builder-tools/flatpak-json2yaml.py --force python-modules.json -o python-modules.yaml && rm python-modules.json
