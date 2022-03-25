@@ -65,6 +65,30 @@ modules:
       - /lib
       - /include
 
+  - name: ffmpeg
+    buildsystem: autotools
+    config-opts:
+      - --disable-doc
+      - --disable-static
+      - --enable-shared
+      - --enable-optimizations
+      - --disable-everything
+      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8
+      - --enable-demuxer=asf,xwma,tta,mpc,mpc8
+      - --enable-protocol=file
+    sources:
+      - type: archive
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz
+        sha256: eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02
+        x-checker-data:
+          type: anitya
+          project-id: 5405
+          stable-only: true
+          versions: {"<": "5.0"}
+          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
+    cleanup:
+      - /share/ffmpeg
+
   - name: chromaprint
     buildsystem: cmake
     config-opts:
@@ -117,6 +141,12 @@ modules:
       - type: archive
         url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.16.3.tar.xz
         sha256: 403c21688065f41e53008874402b5c07832567cc1309a60df597eab7ff5843f0
+        x-checker-data:
+          type: anitya
+          project-id: 15187
+          stable-only: true
+          versions: {"<": "1.17"}
+          url-template: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz
 
   - name: libgme
     buildsystem: cmake
@@ -124,6 +154,11 @@ modules:
       - type: archive
         url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.3.tar.xz
         sha256: aba34e53ef0ec6a34b58b84e28bf8cfbccee6585cebca25333604c35db3e051d
+        x-checker-data:
+          type: anitya
+          project-id: 866
+          stable-only: true
+          url-template: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-$version.tar.xz
 
   - name: gst-plugins-bad
     buildsystem: meson
@@ -131,28 +166,12 @@ modules:
       - type: archive
         url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.16.3.tar.xz
         sha256: 84efe57011658f0a53a5d5b20f64ef109f5105dccb0808c21e069e946673514d
-
-  - name: ffmpeg
-    buildsystem: autotools
-    config-opts:
-      - --disable-doc
-      - --disable-static
-      - --enable-shared
-      - --enable-optimizations
-      - --disable-everything
-      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8
-      - --enable-demuxer=asf,xwma,tta,mpc,mpc8
-      - --enable-protocol=file
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.1.tar.xz
-        sha256: eadbad9e9ab30b25f5520fbfde99fae4a92a1ae3c0257a8d68569a4651e30e02
         x-checker-data:
           type: anitya
-          project-id: 5405
-          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
-    cleanup:
-      - /share/ffmpeg
+          project-id: 21849
+          stable-only: true
+          versions: {"<": "1.17"}
+          url-template: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz
 
   - name: gst-libav
     buildsystem: meson
@@ -160,6 +179,12 @@ modules:
       - type: archive
         url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.16.3.tar.xz
         sha256: d10c5eb1a00a91de97c85c0956c663aa6e99d268195cdec4534c179b831538ec
+        x-checker-data:
+          type: anitya
+          project-id: 21848
+          stable-only: true
+          versions: {"<": "1.17"}
+          url-template: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz
 
   - name: quodlibet
     buildsystem: simple
@@ -169,6 +194,10 @@ modules:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
         tag: release-4.4.0
+        commit: 0f66ba2e3ad2dba510f8de0cd24bb31fa568440f
+        x-checker-data:
+          type: git
+          tag-pattern: "^release-([\\d.]+)$"
 
 cleanup:
   - /include
