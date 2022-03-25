@@ -52,3 +52,6 @@ setup:
 	flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install --noninteractive --user flathub org.gnome.Sdk//$(RUNTIME_VERSION)
 	flatpak install --noninteractive --user flathub org.gnome.Platform//$(RUNTIME_VERSION)
+
+check:
+	flatpak run org.flathub.flatpak-external-data-checker $(APP_ID).yaml
