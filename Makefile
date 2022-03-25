@@ -50,5 +50,5 @@ python-modules:
 
 setup:
 	flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-	flatpak install --user flathub org.gnome.Sdk//$(RUNTIME_VERSION)
-	flatpak install --user flathub org.gnome.Platform//$(RUNTIME_VERSION)
+	flatpak install --noninteractive --user flathub org.gnome.Sdk//$(RUNTIME_VERSION)
+	flatpak install --noninteractive --user flathub org.gnome.Platform//$(RUNTIME_VERSION)
