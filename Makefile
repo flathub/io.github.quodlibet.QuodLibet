@@ -18,8 +18,8 @@ REPO := $(BUILD)/repo
 all: $(REPO) dist-flatpaks
 
 install: $(BUILD)/$(APP_ID).flatpak $(BUILD)/$(APP_ID).Locale.flatpak
-	flatpak install --user $(BUILD)/$(APP_ID).flatpak || true
-	flatpak install --user $(BUILD)/$(APP_ID).Locale.flatpak || true
+	flatpak install --noninteractive --user $(BUILD)/$(APP_ID).flatpak || true
+	flatpak install --noninteractive --user $(BUILD)/$(APP_ID).Locale.flatpak || true
 
 $(REPO): *.yaml
 	flatpak-builder --force-clean --repo=$@ $(BUILD)/build --state-dir=$(BUILD)/.flatpak-builder $(APP_ID).yaml
