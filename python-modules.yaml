@@ -46,8 +46,8 @@ modules:
           type: pypi
           name: sgmllib3k
       - type: file
-        url: https://files.pythonhosted.org/packages/ce/63/b3557ae6d9fa567eb9a61b0401204c6768593624085a9f648b1966c2c241/feedparser-6.0.9-py3-none-any.whl
-        sha256: a522b2b81f3914a74ae44161a341940f74811bd29be5b4c2a689e6e6be51cd39
+        url: https://files.pythonhosted.org/packages/92/1e/741fd94cf2855d251712868f2183cb6485a28daaa3947e1a7046dc036aca/feedparser-6.0.10-py3-none-any.whl
+        sha256: 79c257d526d13b944e965f6095700587f27388e50ea16fd245babe4dfae7024f
         x-checker-data:
           type: pypi
           name: feedparser
