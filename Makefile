@@ -5,7 +5,6 @@ CORE_DEPENDS := \
 PLUGINS_DEPENDS := \
 	pyinotify \
 	musicbrainzngs \
-	dbus-python \
 	paho-mqtt
 
 APP_ID := io.github.quodlibet.QuodLibet

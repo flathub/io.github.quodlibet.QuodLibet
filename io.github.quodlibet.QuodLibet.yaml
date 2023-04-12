@@ -77,8 +77,8 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.2.tar.xz
-        sha256: af419a7f88adbc56c758ab19b4c708afbcae15ef09606b82b855291f6a6faa93
+        url: https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz
+        sha256: e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
         x-checker-data:
           type: anitya
           project-id: 5405
@@ -184,6 +184,17 @@ modules:
           stable-only: true
           versions: {<: '1.19'}
           url-template: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz
+
+  - name: dbus-python
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.3.2.tar.gz
+        sha256: ad67819308618b5069537be237f8e68ca1c7fcc95ee4a121fe6845b1418248f8
+        x-checker-data:
+          type: anitya
+          project-id: 402
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
 
   - name: quodlibet
     buildsystem: simple

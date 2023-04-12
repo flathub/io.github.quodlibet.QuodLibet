@@ -9,8 +9,8 @@ modules:
         --prefix=${FLATPAK_DEST} "mutagen" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl
-        sha256: 9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed
+        url: https://files.pythonhosted.org/packages/03/ee/114d7016d2e34f341e212fefb5e7bd87785077ebcfff0ad23a497c70eea1/mutagen-1.46.0-py3-none-any.whl
+        sha256: 8af0728aa2d5c3ee5a727e28d0627966641fddfe804c23eabb5926a4d770aed5
         x-checker-data:
           type: pypi
           name: mutagen
@@ -40,18 +40,18 @@ modules:
         --prefix=${FLATPAK_DEST} "feedparser" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz
-        sha256: 7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9
-        x-checker-data:
-          type: pypi
-          name: sgmllib3k
-      - type: file
         url: https://files.pythonhosted.org/packages/92/1e/741fd94cf2855d251712868f2183cb6485a28daaa3947e1a7046dc036aca/feedparser-6.0.10-py3-none-any.whl
         sha256: 79c257d526d13b944e965f6095700587f27388e50ea16fd245babe4dfae7024f
         x-checker-data:
           type: pypi
           name: feedparser
           packagetype: bdist_wheel
+      - type: file
+        url: https://files.pythonhosted.org/packages/9e/bd/3704a8c3e0942d711c1299ebf7b9091930adae6675d7c8f476a7ce48653c/sgmllib3k-1.0.0.tar.gz
+        sha256: 7868fb1c8bfa764c1ac563d3cf369c381d1325d36124933a726f29fcdaa812e9
+        x-checker-data:
+          type: pypi
+          name: sgmllib3k
     cleanup:
       - /bin
       - /share/man/man1
@@ -83,21 +83,6 @@ modules:
           type: pypi
           name: musicbrainzngs
           packagetype: bdist_wheel
-    cleanup:
-      - /bin
-      - /share/man/man1
-  - name: python3-dbus-python
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "dbus-python" --no-build-isolation
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/b1/5c/ccfc167485806c1936f7d3ba97db6c448d0089c5746ba105b6eb22dba60e/dbus-python-1.2.18.tar.gz
-        sha256: 92bdd1e68b45596c833307a5ff4b217ee6929a1502f5341bae28fd120acf7260
-        x-checker-data:
-          type: pypi
-          name: dbus-python
     cleanup:
       - /bin
       - /share/man/man1
