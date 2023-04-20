@@ -1,6 +1,6 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '41'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -138,13 +138,13 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.18.6.tar.xz
-        sha256: 4969c409cb6a88317d2108b8577108e18623b2333d7b587ae3f39459c70e3a7f
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.20.6.tar.xz
+        sha256: ca3fb6abc9f6e981d204a736c254e50cc1786a2f5038d83023e42ea009b10246
         x-checker-data:
           type: anitya
           project-id: 15187
           stable-only: true
-          versions: {<: '1.19'}
+          versions: {<: '1.21'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz
 
   - name: libgme
@@ -163,26 +163,26 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.18.6.tar.xz
-        sha256: 0b1b50ac6311f0c510248b6cd64d6d3c94369344828baa602db85ded5bc70ec9
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.6.tar.xz
+        sha256: d98c73fa5cdddb372a91199464515cfc80c89bbe05e3d4387ea4381e4224483a
         x-checker-data:
           type: anitya
           project-id: 21849
           stable-only: true
-          versions: {<: '1.19'}
+          versions: {<: '1.21'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz
 
   - name: gst-libav
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.18.6.tar.xz
-        sha256: e4e50dcd5a29441ae34de60d2221057e8064ed824bb6ca4dc0fd9ee88fbe9b81
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.20.6.tar.xz
+        sha256: 7d619a030542a4a5a11e0302742a3d9b05f8e5cfc453025683a0379bc50aa013
         x-checker-data:
           type: anitya
           project-id: 21848
           stable-only: true
-          versions: {<: '1.19'}
+          versions: {<: '1.21'}
           url-template: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz
 
   - name: dbus-python
