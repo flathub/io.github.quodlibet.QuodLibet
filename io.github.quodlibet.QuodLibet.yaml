@@ -204,7 +204,7 @@ modules:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
         tag: release-4.6.0
-        commit: abbae7bafaa7789c5ae95c7921e9105fad606d85
+        commit: 0ecc4a23e7ca92d5e3c12be127ec64a2f21342e2
         x-checker-data:
           type: git
           tag-pattern: ^release-([\d.]+)$
