@@ -1,6 +1,6 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -77,13 +77,13 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.4.4.tar.xz
-        sha256: e80b380d595c809060f66f96a5d849511ef4a76a26b76eacf5778b94c3570309
+        url: https://ffmpeg.org/releases/ffmpeg-5.0.3.tar.xz
+        sha256: 04c70c377de233a4b217c2fdf76b19aeb225a287daeb2348bccd978c47b1a1db
         x-checker-data:
           type: anitya
           project-id: 5405
           stable-only: true
-          versions: {<: '5.0'}
+          versions: {<: '5.1'}
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
     cleanup:
       - /share/ffmpeg
