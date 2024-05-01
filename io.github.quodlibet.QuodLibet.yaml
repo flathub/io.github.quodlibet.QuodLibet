@@ -17,9 +17,6 @@ finish-args:
   # some embedded covers and the fifo is still shared through /tmp
   - --filesystem=/tmp
 
-  # bookmarks in the filesystem browser
-  - --filesystem=xdg-config/gtk-3.0:ro
-
   # Various D-Bus names: for...
   # ...multimedia keys
   - --talk-name=org.gnome.SettingsDaemon.MediaKeys
