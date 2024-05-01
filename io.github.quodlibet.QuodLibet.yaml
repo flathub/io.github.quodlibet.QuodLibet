@@ -1,6 +1,6 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -77,13 +77,13 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-5.0.3.tar.xz
-        sha256: 04c70c377de233a4b217c2fdf76b19aeb225a287daeb2348bccd978c47b1a1db
+        url: https://ffmpeg.org/releases/ffmpeg-6.0.1.tar.xz
+        sha256: 9b16b8731d78e596b4be0d720428ca42df642bb2d78342881ff7f5bc29fc9623
         x-checker-data:
           type: anitya
           project-id: 5405
           stable-only: true
-          versions: {<: '5.1'}
+          versions: {<: '6.1'}
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
     cleanup:
       - /share/ffmpeg
@@ -138,51 +138,51 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.20.7.tar.xz
-        sha256: e761665bb3c66fb35ff3567a283b3763b494acf0fe1df8f4abeda047b22dbc55
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.22.12.tar.xz
+        sha256: d59a1aaf8dd2cc416dc5b5c0b7aecd02b1811bf1229aa724e6c2a503d3799083
         x-checker-data:
           type: anitya
           project-id: 15187
           stable-only: true
-          versions: {<: '1.21'}
+          versions: {<: '1.23'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz
 
   - name: libgme
     buildsystem: cmake
     sources:
       - type: archive
-        url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.3.tar.xz
-        sha256: aba34e53ef0ec6a34b58b84e28bf8cfbccee6585cebca25333604c35db3e051d
+        url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.3.tar.gz
+        sha256: 4c5a7614acaea44e5cb1423817d2889deb82674ddbc4e3e1291614304b86fca0
         x-checker-data:
           type: anitya
           project-id: 866
           stable-only: true
-          url-template: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-$version.tar.xz
+          url-template: https://github.com/libgme/game-music-emu/archive/refs/tags/$version.tar.gz
 
   - name: gst-plugins-bad
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.20.7.tar.xz
-        sha256: 87251beebfd1325e5118cc67774061f6e8971761ca65a9e5957919610080d195
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.22.12.tar.xz
+        sha256: 388b4c4412f42e36a38b17cc34119bc11879bd4d9fbd4ff6d03b2c7fc6b4d494
         x-checker-data:
           type: anitya
           project-id: 21849
           stable-only: true
-          versions: {<: '1.21'}
+          versions: {<: '1.23'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz
 
   - name: gst-libav
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.20.7.tar.xz
-        sha256: 65e776e366f7f3549a9a829418817f464dcc5dc9845220c64a886683d8841b56
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.22.12.tar.xz
+        sha256: 3b60d4cac2fbcd085a93e9389ca23e0443bee1ca75574d31d4f12bb1bbecab48
         x-checker-data:
           type: anitya
           project-id: 21848
           stable-only: true
-          versions: {<: '1.21'}
+          versions: {<: '1.23'}
           url-template: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz
 
   - name: dbus-python
