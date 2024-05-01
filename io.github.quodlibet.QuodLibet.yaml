@@ -205,6 +205,9 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^release-([\d.]+)$
+      - type: patch
+        paths:
+          - patches/0001-appdata-add-developer_name.patch
 
 cleanup:
   - /include

@@ -1,0 +1,38 @@
+From 735561db9c9d722c0f9c8cbb7eab672dee0cd319 Mon Sep 17 00:00:00 2001
+From: Christoph Reiter <reiter.christoph@gmail.com>
+Date: Wed, 1 May 2024 11:57:20 +0200
+Subject: [PATCH] appdata: add developer_name
+
+flathub complains otherwise
+---
+ data/io.github.quodlibet.ExFalso.appdata.xml.in   | 1 +
+ data/io.github.quodlibet.QuodLibet.appdata.xml.in | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/data/io.github.quodlibet.ExFalso.appdata.xml.in b/data/io.github.quodlibet.ExFalso.appdata.xml.in
+index 0778f4c30..2be864a1c 100644
+--- a/data/io.github.quodlibet.ExFalso.appdata.xml.in
++++ b/data/io.github.quodlibet.ExFalso.appdata.xml.in
+@@ -6,6 +6,7 @@
+     <summary>Edit tags in your audio files</summary>
+     <metadata_license>CC0</metadata_license>
+     <project_license>GPL-2.0-or-later</project_license>
++    <developer_name>The Quod Libet Development Team</developer_name>
+     <translation type="gettext">quodlibet</translation>
+     <launchable type="desktop-id">io.github.quodlibet.ExFalso.desktop</launchable>
+     <provides>
+diff --git a/data/io.github.quodlibet.QuodLibet.appdata.xml.in b/data/io.github.quodlibet.QuodLibet.appdata.xml.in
+index 06824b187..247318e72 100644
+--- a/data/io.github.quodlibet.QuodLibet.appdata.xml.in
++++ b/data/io.github.quodlibet.QuodLibet.appdata.xml.in
+@@ -6,6 +6,7 @@
+     <summary>Listen to, browse, or edit your audio collection</summary>
+     <metadata_license>CC0</metadata_license>
+     <project_license>GPL-2.0-or-later</project_license>
++    <developer_name>The Quod Libet Development Team</developer_name>
+     <translation type="gettext">quodlibet</translation>
+     <launchable type="desktop-id">io.github.quodlibet.QuodLibet.desktop</launchable>
+     <provides>
+-- 
+2.43.0
+
