@@ -1,7 +1,14 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '46'
 sdk: org.gnome.Sdk
+add-extensions:
+  -  org.freedesktop.Platform.ffmpeg-full:
+     version: '23.08'
+     directory: lib/ffmpeg
+     add-ld-path: "."
+     no-autodownload: false
+     autodelete: false
 command: quodlibet
 build-options:
   no-debuginfo: true
@@ -12,6 +19,7 @@ finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=pulseaudio
+  # - --env=GST_PLUGIN_SYSTEM_PATH=/app/lib/gstreamer-1.0
   - --filesystem=host
 
   # some embedded covers and the fifo is still shared through /tmp
@@ -60,30 +68,6 @@ modules:
     cleanup:
       - /lib
       - /include
-
-  - name: ffmpeg
-    buildsystem: autotools
-    config-opts:
-      - --disable-doc
-      - --disable-static
-      - --enable-shared
-      - --enable-optimizations
-      - --disable-everything
-      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8
-      - --enable-demuxer=asf,xwma,tta,mpc,mpc8
-      - --enable-protocol=file
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-6.0.1.tar.xz
-        sha256: 9b16b8731d78e596b4be0d720428ca42df642bb2d78342881ff7f5bc29fc9623
-        x-checker-data:
-          type: anitya
-          project-id: 5405
-          stable-only: true
-          versions: {<: '6.1'}
-          url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
-    cleanup:
-      - /share/ffmpeg
 
   - name: chromaprint
     buildsystem: cmake-ninja
@@ -211,8 +195,15 @@ modules:
 
 cleanup:
   - /include
+  - /lib/girepository-1.0
+  - /lib/pkgconfig
+  - /lib/gstreamer-1.0/include
+  - /share/aclocal
+  - /share/doc
   - /share/gtk-doc
   - /share/gir-1.0
+  - /share/vala
+  - /share/man
   - '*.la'
   - '*.a'
 cleanup-commands:
