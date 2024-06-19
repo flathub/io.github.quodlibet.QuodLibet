@@ -1,6 +1,6 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '46'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -211,8 +211,16 @@ modules:
 
 cleanup:
   - /include
-  - /share/gtk-doc
+  - /lib/girepository-1.0
+  - /lib/gstreamer-1.0/include
+  - /lib/pkgconfig
+  - /share/aclocal
+  - /share/doc
   - /share/gir-1.0
+  - /share/gstreamer-1.0
+  - /share/gtk-doc
+  - /share/man
+  - /share/vala
   - '*.la'
   - '*.a'
 cleanup-commands:
