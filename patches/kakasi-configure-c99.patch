@@ -1,0 +1,13 @@
+diff --git a/configure.in b/configure.in
+index e865b04ffd027f3c..4a15beffd0e252a4 100644
+--- a/configure.in
++++ b/configure.in
+@@ -85,7 +85,7 @@ AS_VAR_IF(utf8, "yes",[
+     LIBS="$LIBICONV $LIBS"
+     AC_DEFINE(KAKASI_SUPPORT_UTF8, 1, [KAKASI_SUPPORT_UTF8])
+     AC_RUN_IFELSE([AC_LANG_PROGRAM([#include <iconv.h>],
+-		    [if (iconv_open("EUC-JP", "UTF-8") == -1) exit(1);])],
++		    [if (iconv_open("EUC-JP", "UTF-8") == -1) return 1;])],
+ 	[],
+ 	[AC_MSG_ERROR([can not use EUC-JP or UTF-8 encoding on iconv])])
+ ])
