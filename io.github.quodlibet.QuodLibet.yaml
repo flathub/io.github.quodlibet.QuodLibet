@@ -208,16 +208,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/quodlibet/quodlibet.git
-        tag: release-4.6.0
-        commit: 0ecc4a23e7ca92d5e3c12be127ec64a2f21342e2
+        tag: release-4.7.1
+        commit: f98c33c9fcaf222f3f259ccdd8e79adc833734a0
         x-checker-data:
           type: git
           tag-pattern: ^release-([\d.]+)$
-      - type: patch
-        paths:
-          - patches/0001-appdata-add-developer_name.patch
-          - patches/a8b6f6bb34864a6821174edbf7802b689e440db3.patch
-          - patches/7fda4345bdabafa896f4a632990c20d91076e98d.patch
 
 cleanup:
   - /include
