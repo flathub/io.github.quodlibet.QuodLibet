@@ -130,8 +130,8 @@ modules:
   - name: soundtouch
     sources:
       - type: archive
-        url: https://codeberg.org/soundtouch/soundtouch/archive/2.3.1.tar.gz
-        sha256: 42633774f372d8cb0a33333a0ea3b30f357c548626526ac9f6ce018c94042692
+        url: https://codeberg.org/soundtouch/soundtouch/archive/2.4.0.tar.gz
+        sha256: 3dda3c9ab1e287f15028c010a66ab7145fa855dfa62763538f341e70b4d10abd
         x-checker-data:
           type: anitya
           project-id: 115722
@@ -141,8 +141,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.12.tar.xz
-        sha256: 19ed6eef4ea1a742234fb35e2cdb107168595a4dd409a9fac0b7a16543eee78b
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.13.tar.xz
+        sha256: dc08bb11dce0a43453466fb9034e4fe06709fb5af68475bcf6d288693b661a5d
         x-checker-data:
           type: anitya
           project-id: 15187
@@ -154,8 +154,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.3.tar.gz
-        sha256: 4c5a7614acaea44e5cb1423817d2889deb82674ddbc4e3e1291614304b86fca0
+        url: https://github.com/libgme/game-music-emu/archive/refs/tags/0.6.4.tar.gz
+        sha256: f2360feb5a32ace226c583df4faf6eff74145c81264aaea11e17a1af2f6f101a
         x-checker-data:
           type: anitya
           project-id: 866
@@ -166,8 +166,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.12.tar.xz
-        sha256: 3d386af3d1dbd1a06c74a6251250c269b481e703f0e3255ba89ef6c1e063afea
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.13.tar.xz
+        sha256: 3cbe7d7cec5db958781f7ab66caa5afd67b133c223fde71f0403277731f0cc4d
         x-checker-data:
           type: anitya
           project-id: 21849
@@ -179,8 +179,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.12.tar.xz
-        sha256: ef72c1c70a17b3c0bb283d16d09aba496d3401c927dcf5392a8a7866d9336379
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.13.tar.xz
+        sha256: 150e2b70588fa32a1294f42665756f2175417ce4b5988e2c2081b683719aa6c1
         x-checker-data:
           type: anitya
           project-id: 21848
