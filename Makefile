@@ -5,7 +5,7 @@ CORE_DEPENDS := \
 PLUGINS_DEPENDS := \
 	pyinotify \
 	musicbrainzngs \
-	paho-mqtt
+	"paho-mqtt<2"
 
 APP_ID := io.github.quodlibet.QuodLibet
 RUNTIME_VERSION := 47
