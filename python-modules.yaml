@@ -40,8 +40,8 @@ modules:
         --prefix=${FLATPAK_DEST} "feedparser" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/7c/d4/8c31aad9cc18f451c49f7f9cfb5799dadffc88177f7917bc90a66459b1d7/feedparser-6.0.11-py3-none-any.whl
-        sha256: 0be7ee7b395572b19ebeb1d6aafb0028dee11169f1c934e0ed67d54992f4ad45
+        url: https://files.pythonhosted.org/packages/4e/eb/c96d64137e29ae17d83ad2552470bafe3a7a915e85434d9942077d7fd011/feedparser-6.0.12-py3-none-any.whl
+        sha256: 6bbff10f5a52662c00a2e3f86a38928c37c48f77b3c511aedcd51de933549324
         x-checker-data:
           type: pypi
           name: feedparser
