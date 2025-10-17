@@ -8,7 +8,7 @@ PLUGINS_DEPENDS := \
 	"paho-mqtt<2"
 
 APP_ID := io.github.quodlibet.QuodLibet
-RUNTIME_VERSION := 47
+RUNTIME_VERSION := 48
 
 BUILD := build
 DIST := dist
