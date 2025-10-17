@@ -75,7 +75,7 @@ modules:
       - --enable-shared
       - --enable-optimizations
       - --disable-everything
-      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8
+      - --enable-decoder=ape,dca,eac3,mlp,tak,truehd,wmav1,wmav2,wmapro,tta,mpc7,mpc8,alac
       - --enable-demuxer=asf,xwma,tta,mpc,mpc8
       - --enable-protocol=file
     sources:
