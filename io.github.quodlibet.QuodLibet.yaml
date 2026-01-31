@@ -1,6 +1,6 @@
 app-id: io.github.quodlibet.QuodLibet
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: quodlibet
 build-options:
@@ -62,9 +62,7 @@ modules:
           - patches/kakasi-configure-c99.patch
       - type: shell
         commands:
-          - autoreconf -vfi -I /usr/share/gettext/m4
-    build-options:
-      cflags: "-std=gnu17"
+          - autoreconf -vfi
     cleanup:
       - /lib
       - /include
@@ -82,13 +80,13 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-7.1.3.tar.xz
-        sha256: f0bf043299db9e3caacb435a712fc541fbb07df613c4b893e8b77e67baf3adbe
+        url: https://ffmpeg.org/releases/ffmpeg-7.0.3.tar.xz
+        sha256: bbb18f3cc5c1c34b21cf176c0168c4d9aa97697542a97f60d491a58a814dea65
         x-checker-data:
           type: anitya
           project-id: 5405
           stable-only: true
-          versions: {<: '7.2'}
+          versions: {<: '7.1'}
           url-template: https://ffmpeg.org/releases/ffmpeg-$version.tar.xz
     cleanup:
       - /share/ffmpeg
@@ -143,13 +141,13 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.26.10.tar.xz
-        sha256: b2c648ef62cbf03cdc215f55dca01e2e8372983d8c88de3fa03671ddf08d7d14
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.24.13.tar.xz
+        sha256: dc08bb11dce0a43453466fb9034e4fe06709fb5af68475bcf6d288693b661a5d
         x-checker-data:
           type: anitya
           project-id: 15187
           stable-only: true
-          versions: {<: '1.27'}
+          versions: {<: '1.25'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz
 
   - name: libgme
@@ -168,26 +166,26 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.26.10.tar.xz
-        sha256: fec973dff512b507d9dcb5a828e04e061e52188f4d5989e953aed6a41beda437
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.24.13.tar.xz
+        sha256: 3cbe7d7cec5db958781f7ab66caa5afd67b133c223fde71f0403277731f0cc4d
         x-checker-data:
           type: anitya
           project-id: 21849
           stable-only: true
-          versions: {<: '1.27'}
+          versions: {<: '1.25'}
           url-template: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz
 
   - name: gst-libav
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.26.10.tar.xz
-        sha256: c8c2fd29cc063a6d26c314cd1a0a3a3060c8a029981b9520fab52c4206d11611
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.24.13.tar.xz
+        sha256: 150e2b70588fa32a1294f42665756f2175417ce4b5988e2c2081b683719aa6c1
         x-checker-data:
           type: anitya
           project-id: 21848
           stable-only: true
-          versions: {<: '1.27'}
+          versions: {<: '1.25'}
           url-template: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz
 
   - name: dbus-python
