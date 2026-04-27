@@ -64,7 +64,7 @@ modules:
         commands:
           - autoreconf -vfi -I /usr/share/gettext/m4
     build-options:
-      cflags: "-std=gnu17"
+      cflags: -std=gnu17
     cleanup:
       - /lib
       - /include
@@ -143,8 +143,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.26.10.tar.xz
-        sha256: b2c648ef62cbf03cdc215f55dca01e2e8372983d8c88de3fa03671ddf08d7d14
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.26.11.tar.xz
+        sha256: bf9c9f72ee374825cfd43868c285bcb01700df2584069e75d7af455fe48244f8
         x-checker-data:
           type: anitya
           project-id: 15187
@@ -168,8 +168,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.26.10.tar.xz
-        sha256: fec973dff512b507d9dcb5a828e04e061e52188f4d5989e953aed6a41beda437
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.26.11.tar.xz
+        sha256: 110fb82795f0e569b1e27b12ab9699d35c7762e1ff4db95335d6ac8d1442af3d
         x-checker-data:
           type: anitya
           project-id: 21849
@@ -181,8 +181,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.26.10.tar.xz
-        sha256: c8c2fd29cc063a6d26c314cd1a0a3a3060c8a029981b9520fab52c4206d11611
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.26.11.tar.xz
+        sha256: 9bb3d2681ef0de92d1b1a9d955186236ee22e64f372db9bfc0d22e2d0df19865
         x-checker-data:
           type: anitya
           project-id: 21848
