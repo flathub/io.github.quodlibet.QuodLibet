@@ -64,7 +64,7 @@ modules:
         commands:
           - autoreconf -vfi -I /usr/share/gettext/m4
     build-options:
-      cflags: "-std=gnu17"
+      cflags: -std=gnu17
     cleanup:
       - /lib
       - /include
@@ -143,8 +143,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.26.10.tar.xz
-        sha256: b2c648ef62cbf03cdc215f55dca01e2e8372983d8c88de3fa03671ddf08d7d14
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.26.11.tar.xz
+        sha256: bf9c9f72ee374825cfd43868c285bcb01700df2584069e75d7af455fe48244f8
         x-checker-data:
           type: anitya
           project-id: 15187
