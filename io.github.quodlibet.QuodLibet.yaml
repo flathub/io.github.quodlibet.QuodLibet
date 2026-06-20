@@ -82,8 +82,8 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-7.1.4.tar.xz
-        sha256: 71f4aac3573ed9060489cb62526a6c7dda815ae10993789611acd7be9fa9fbf4
+        url: https://ffmpeg.org/releases/ffmpeg-7.1.5.tar.xz
+        sha256: de668509caf9e35e3cd162473441fdb29538c6d96ed080292b3cf9e6fc5d558f
         x-checker-data:
           type: anitya
           project-id: 5405
