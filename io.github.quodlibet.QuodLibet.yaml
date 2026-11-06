@@ -201,7 +201,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 402
-          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-$version.tar.gz
+          url-template: https://dbus.freedesktop.org/releases/dbus-python/dbus_python-$version.tar.gz
 
   - name: quodlibet
     buildsystem: simple
