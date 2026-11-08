@@ -143,8 +143,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.8.tar.xz
-        sha256: 51ae53002e3bbe9ed0f2215020c5a248bf0ed41b9d9a2a4e102b8583fedab61c
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-1.28.9.tar.xz
+        sha256: 550a52536962186f5488e06b5c08f31ae0f18400aee32a3385156d31cb4b1189
         x-checker-data:
           type: anitya
           project-id: 15187
@@ -170,8 +170,8 @@ modules:
       - -Dwebrtcdsp=disabled
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.28.8.tar.xz
-        sha256: 670d888bde8242579b0d8e91f60cf337aa7be20ca7c315ebfbdd6e5a9218d104
+        url: https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-1.28.9.tar.xz
+        sha256: 4a4e0b7bf84f868378c48f143a7ac3a98923b488a5b74f1a35ba46bc3c43f6b1
         x-checker-data:
           type: anitya
           project-id: 21849
@@ -183,8 +183,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.8.tar.xz
-        sha256: 98ad3d7f8932c495e268708903f1c3388d5f26a0db34727a9f861ee23b724177
+        url: https://gstreamer.freedesktop.org/src/gst-libav/gst-libav-1.28.9.tar.xz
+        sha256: 4b3df21fa70972a80891d2298cf32c14a62c3db4483d545c7ac018230399186b
         x-checker-data:
           type: anitya
           project-id: 21848
@@ -196,8 +196,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://dbus.freedesktop.org/releases/dbus-python/dbus-python-1.3.2.tar.gz
-        sha256: ad67819308618b5069537be237f8e68ca1c7fcc95ee4a121fe6845b1418248f8
+        url: https://dbus.freedesktop.org/releases/dbus-python/dbus_python-1.5.1.tar.gz
+        sha256: 57423cf87d09b7d084f420b55b737fe654c33339b06df77945620d97795c6ac4
         x-checker-data:
           type: anitya
           project-id: 402
